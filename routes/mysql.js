@@ -6,7 +6,13 @@ const db = require('../controllers/mysqlController');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  db.getUsers((data) => {
+  db.getUser((data) => {
+    res.send(data);
+  });
+});
+
+router.get('/', (req, res) => {
+  db.getUser((data) => {
     res.send(data);
   });
 });
