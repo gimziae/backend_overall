@@ -4,7 +4,7 @@ const express = require('express'); // express 켜기
 const cors = require('cors'); // cors 켜기
 const session = require('express-session'); // 세션 불러오기
 
-const PORT = 4000; // 포트번호 설정
+const PORT = 4500; // 포트번호 설정
 const app = express(); // 실행시킨 express를 app 에 담아주기
 
 const indexRouter = require('./routes'); // = require('./routes/index');
