@@ -9,6 +9,7 @@ const app = express(); // 실행시킨 express를 app 에 담아주기
 const indexRouter = require('./routes'); // = require('./routes/index');
 const userRouter = require('./routes/user');
 const chatRouter = require('./routes/chat');
+const mysqlRouter = require('./routes/mysql');
 
 app.use(cors()); // cors를 미들웨어로 넣어주기
 app.set('view engine', 'ejs');
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: false })); // 바디파서 설정 (2)
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/chat', chatRouter);
+app.use('/mysql', mysqlRouter);
 
 app.listen(PORT, () => {
   console.log(`서버는 ${PORT}번에서 실행 중입니다.`);
